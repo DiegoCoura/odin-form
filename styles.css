@@ -1,0 +1,84 @@
+@font-face {
+  font-family: odinFont;
+  src: url("./public/Norse-Bold.otf");
+}
+
+html {
+  background-color: black;
+}
+
+.main-container {
+  display: flex;
+  height: 98vh;
+}
+
+.banner-container {
+  background-image: url("./public/halie-west-25xggax4bSA-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.odin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 400px;
+  padding: 10px 0;
+}
+
+.odin-container-bg {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 0;
+  position: absolute;
+}
+
+.odin-logo {
+    height: 120px;
+    z-index: 1;
+    margin: 0;
+}
+
+.odin-title {
+  font-family: odinFont;
+  font-size: 5rem;
+  color: white;
+  z-index: 1;
+  margin: 0;
+}
+
+.right-container {
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container {
+
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+label{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+input{
+    width: 250px;
+}
