@@ -1,3 +1,7 @@
+*:focus {
+  outline: none !important;
+}
+
 @font-face {
   font-family: odinFont;
   src: url("./public/Norse-Bold.otf");
@@ -5,6 +9,15 @@
 
 html {
   background-color: black;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 500;
 }
 
 .main-container {
@@ -17,11 +30,11 @@ html {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 10.6rem;
 }
 
 .odin-container {
@@ -30,8 +43,8 @@ html {
   justify-content: center;
   position: relative;
   width: 100%;
-  margin-bottom: 400px;
-  padding: 10px 0;
+  height: 120px;
+  padding: 15px 0;
 }
 
 .odin-container-bg {
@@ -41,44 +54,98 @@ html {
   opacity: 0.5;
   z-index: 0;
   position: absolute;
+  filter: blur(0.5px);
 }
 
 .odin-logo {
-    height: 120px;
-    z-index: 1;
-    margin: 0;
+  height: 120px;
+  z-index: 1;
+  margin: 0;
 }
 
 .odin-title {
   font-family: odinFont;
-  font-size: 5rem;
+  font-size: 6rem;
   color: white;
   z-index: 1;
   margin: 0;
 }
 
 .right-container {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(247 247 247);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 8rem;
+}
+
+.title {
+  padding: 0 40px;
 }
 
 .form-container {
-
+  background-color: white;
+  padding: 0 40px;
+  box-shadow: 0px 2px 4px 0px #cccbcb;
 }
 
-#form{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.form-container h2 {
+  position: relative;
 }
 
-label{
-    font-size: 12px;
-    margin-bottom: 0;
+#form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  height: 210px;
+  align-content: flex-start;
+  column-gap: 5rem;
 }
 
-input{
-    width: 250px;
+label {
+  font-size: 12px;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+input {
+  width: 250px;
+  margin-bottom: 20px;
+  height: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+input:focus {
+  border: 1px solid blue;
+  box-shadow: 2px 2px 4px #adacac;
+}
+
+.login-block {
+  position: absolute;
+  margin-top: 240px;
+}
+
+form button {
+  background-color: #596d48;
+  color: white;
+  padding: 16px 50px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #adacac;
+}
+
+form button:active {
+  background-color: #768a65;
+  transform: translateY(2px);
+}
+
+.login-block a {
+  text-decoration: none;
+  color: #596d48;
+  font-weight: 600;
 }

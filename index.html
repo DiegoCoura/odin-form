@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Dida's Form</title>
   </head>
@@ -29,12 +37,14 @@
         </h2>
 
         <div class="form-container">
+          <div class="form-container-bg"></div>
           <h2>Let's do this!</h2>
 
           <form action="#" method="post" id="form">
             <div>
               <label for="first_name">FIRST NAME</label><br />
               <input
+                class="input-field"
                 type="text"
                 id="first_name"
                 name="first_name"
@@ -45,6 +55,7 @@
             <div>
               <label for="user_email">EMAIL</label><br />
               <input
+                class="input-field"
                 type="email"
                 id="user_email"
                 name="user_email"
@@ -55,6 +66,7 @@
             <div>
               <label for="user_password">PASSWORD</label><br />
               <input
+                class="input-field"
                 type="password"
                 id="user_password"
                 name="user_password"
@@ -65,6 +77,7 @@
             <div>
               <label for="last_name">LAST NAME</label><br />
               <input
+                class="input-field"
                 type="text"
                 id="last_name"
                 name="last_name"
@@ -75,6 +88,7 @@
             <div>
               <label for="phone_number">FIRST NAME</label><br />
               <input
+                class="input-field"
                 type="text"
                 id="phone_number"
                 name="phone_number"
@@ -85,16 +99,21 @@
             <div>
               <label for="confirm_passowrd">FIRST NAME</label><br />
               <input
+                class="input-field"
                 type="password"
                 id="confirm_passowrd"
                 name="confirm_password"
                 required
               /><br />
             </div>
-            
-            <button type="submit">
-                Create Account
-            </button>
+
+            <div class="login-block">
+              <button type="submit">Create Account</button>
+              <p>
+                Already have an account?
+                <a class="login-link" href="">Log in</a>
+              </p>
+            </div>
           </form>
         </div>
       </div>
