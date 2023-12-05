@@ -122,6 +122,10 @@ input:focus {
   box-shadow: 2px 2px 4px #adacac;
 }
 
+input[type="password"]:invalid{
+  border-color: red;
+}
+
 .login-block {
   position: absolute;
   margin-top: 240px;
