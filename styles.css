@@ -94,44 +94,61 @@ h2 {
 
 #form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   position: relative;
-  height: 210px;
+  height: 240px;
   align-content: flex-start;
   column-gap: 5rem;
 }
 
-label {
+.input-control{
+  height: 80px;
+}
+
+.input-control label {
   font-size: 12px;
   margin-bottom: 0;
   letter-spacing: 2px;
 }
 
-input {
+.input-control input {
   width: 250px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   height: 25px;
   border: 1px solid #e5e7eb;
   border-radius: 5px;
   padding: 0 10px;
 }
 
-input:focus {
+.input-control input:focus {
   border: 1px solid blue;
   box-shadow: 2px 2px 4px #adacac;
 }
 
-input[type="password"]:invalid{
+.input-control input[type="password"]:invalid{
   border-color: red;
 }
 
-.login-block {
-  position: absolute;
-  margin-top: 240px;
+.input-control.success input{
+  border-color: #596d48;
 }
 
-form button {
+.input-control.error input{
+  border-color: #ff3860;  
+}
+
+.message{
+  color: red;
+  font-size: .8rem;
+}
+
+#form .login-block {
+  position: absolute;
+  margin-top: 270px;
+}
+
+#form button {
   background-color: #596d48;
   color: white;
   padding: 16px 50px;
@@ -143,7 +160,7 @@ form button {
   box-shadow: 2px 2px 4px #adacac;
 }
 
-form button:active {
+#form button:active {
   background-color: #768a65;
   transform: translateY(2px);
 }

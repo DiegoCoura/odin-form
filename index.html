@@ -40,8 +40,8 @@
           <div class="form-container-bg"></div>
           <h2>Let's do this!</h2>
 
-          <form action="#" method="post" id="form">
-            <div>
+          <form novalidate action="#" method="post" id="form">
+            <div class="input-control">
               <label for="first_name">FIRST NAME</label><br />
               <input
                 class="input-field"
@@ -49,10 +49,25 @@
                 id="first_name"
                 name="first_name"
                 required
-              /><br />
+              />
+              <div class="error message"></div>
+              <br />
             </div>
 
-            <div>
+            <div class="input-control">
+              <label for="last_name">LAST NAME</label><br />
+              <input
+                class="input-field"
+                type="text"
+                id="last_name"
+                name="last_name"
+                required
+              />
+              <div class="error message"></div>
+              <br />
+            </div>
+
+            <div class="input-control">
               <label for="user_email">EMAIL</label><br />
               <input
                 title="must be a valid email address"
@@ -62,34 +77,12 @@
                 name="user_email"
                 pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$"
                 required
-              /><br />
+              />
+              <div class="error message"></div>
+              <br />
             </div>
 
-            <div>
-              <label for="user_password">PASSWORD</label><br />
-              <input
-                title="Must be at least 8 characters"
-                class="input-field"
-                type="password"
-                id="user_password"
-                name="user_password"
-                pattern="[a-zA-Z0-9]{8,}"
-                required
-              /><br />
-            </div>
-
-            <div>
-              <label for="last_name">LAST NAME</label><br />
-              <input
-                class="input-field"
-                type="text"
-                id="last_name"
-                name="last_name"
-                required
-              /><br />
-            </div>
-
-            <div>
+            <div class="input-control">
               <label for="phone_number">PHONE NUMBER</label><br />
               <input
                 class="input-field"
@@ -99,24 +92,40 @@
                 name="phone_number"
                 autocomplete="off"
                 minlength="8"
-                pattern="^\(?[1-9]{2}\)? ?(?:[2-8]|9[0-9])[0-9]{3}\-?[0-9]{4}$"
                 required
-              /><br />
+              />
+              <div class="error message"></div>
+              <br />
             </div>
 
-            <div>
+            <div class="input-control">
+              <label for="user_password">PASSWORD</label><br />
+              <input
+                title="Must be at least 8 characters"
+                class="input-field"
+                type="password"
+                id="user_password"
+                name="user_password"
+                pattern="[a-zA-Z0-9]{8,}"
+                required
+              />
+              <div class="error message"></div>
+              <br />
+            </div>
+
+            <div class="input-control">
               <label for="confirm_passowrd">CONFIRM PASSWORD</label><br />
               <input
                 title="Passwords do not match"
-                class="input-field error"
+                class="input-field"
                 type="password"
-                id="confirm_passowrd"
+                id="confirm_password"
                 name="confirm_password"
                 minlength="5"
-                pattern="[a-zA-Z0-9]{8,}"
-              
                 required
-              /><br />
+              />
+              <div class="error message"></div>
+              <br />
             </div>
 
             <div class="login-block">
@@ -130,5 +139,6 @@
         </div>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
